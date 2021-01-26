@@ -121,7 +121,7 @@ public class TrackScheduler extends AudioEventAdapter {
             public void trackLoaded(AudioTrack track) {
                 System.out.println("Loaded! " + track.getInfo().title);
                 player.startTrack(track, false);
-                Login.Jda.getPresence().setActivity(Activity.playing("▶ " + track.getInfo().title));
+                Login.Jda.getPresence().setActivity(Activity.playing("▶ " + 24/7 nonstop Music, as the name says :));
             }
 
             @Override
