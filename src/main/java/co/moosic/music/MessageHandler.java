@@ -18,10 +18,9 @@ public class MessageHandler extends ListenerAdapter {
             e.getChannel().sendMessage(new EmbedBuilder()
                     .setAuthor("Now Playing", PlayingTrack.getInfo().uri, null)
                     .setColor(Color.GREEN)
-                    .addField("Song Name", PlayingTrack.getInfo().title, true)
-                    .addField("Channel", PlayingTrack.getInfo().author, true)
-                    .addField("Song Progress", String.format("`%s / %s`", this.getLength(PlayingTrack.getPosition()), this.getLength(PlayingTrack.getInfo().length)), true)
-                    .addField("Song Link", "[Youtube Link](" + PlayingTrack.getInfo().uri + ")", true)
+                    .addField("Station Name", PlayingTrack.getInfo().title, true)
+                    .addField("Playing-Time", String.format("`%s / %s`", this.getLength(PlayingTrack.getPosition()), true)
+                    .addField("Station Link", "[Youtube Link](" + PlayingTrack.getInfo().uri + ")", true)
                     .setThumbnail(String.format("https://img.youtube.com/vi/%s/hqdefault.jpg", PlayingTrack.getInfo().identifier))
                     .build()
             ).queue();
